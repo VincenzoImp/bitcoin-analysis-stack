@@ -37,7 +37,7 @@ A comprehensive Docker-based Bitcoin blockchain analysis platform combining Bitc
 ## 📋 Requirements
 
 - **Docker** & **Docker Compose** (v2.0+)
-- **Storage**: ~1.4TB for full setup (600GB Bitcoin + 600GB Neo4j + 200GB overhead)
+- **Storage**: ~2TB for full setup (600GB Bitcoin + 600GB Electrs + 600GB Neo4j + 200GB overhead)
 - **RAM**: 16GB minimum, 32GB recommended
 - **CPU**: 4+ cores recommended
 
@@ -343,8 +343,8 @@ Use NetworkX or Pyvis to visualize transaction graphs (see notebooks).
 ## ⚠️ Limitations
 
 1. **Initial sync time**: 3-7 days for full Bitcoin blockchain
-2. **Storage**: 1.4TB required for complete setup
-3. **Neo4j size**: Graph database is ~6x blockchain size
+2. **Storage**: ~2TB required for complete setup (Bitcoin + Electrs + Neo4j)
+3. **Neo4j size**: Graph database is similar in size to blockchain (~600GB) due to relationship storage
 4. **BlockSci**: Requires manual compilation (Dockerfile is placeholder)
 5. **Privacy**: While minimizing network participation, your node still connects to peers
 
